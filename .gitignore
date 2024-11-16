@@ -31,13 +31,13 @@
 *.out
 *.app
 
-.vs
+/.vs
 Fusion/.vs
 Fusion/Debug
 Fusion/x64
 Fusion/Fusion-sl.sln
 Fusion/Fusion/x64
 Fusion/Fusion/Debug
-Fusion/Fusion/Fusion.vcxproj.user
-Fusion/Fusion/Fusion.vcxproj
-Fusion/Fusion/Fusion.vcxproj.filters
+Fusion/Fusion.vcxproj.user
+Fusion/Fusion.vcxproj
+Fusion/Fusion.vcxproj.filters
