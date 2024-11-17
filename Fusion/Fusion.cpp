@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <stdlib.h>
 #include <windows.h>
+#include "scramble.h"
 using namespace std;
 int main()
 {
@@ -78,6 +79,7 @@ int main()
 					system("cls");
 					cout << "You choose SCRAMBLE" << endl;
 
+					ScrambleGame(words, 4);
 					break;
 				default:
 					system("cls");
