@@ -128,9 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Fusion.cpp" />
+    <ClCompile Include="hangman.cpp" />
     <ClCompile Include="scramble.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="hangman.h" />
     <ClInclude Include="scramble.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
