@@ -9,7 +9,7 @@ using namespace std;
 
 class HangmanGame {
 public:
-	// constructor to ini 
+
 	HangmanGame()
 	{
 		srand(static_cast<unsigned int>(time(nullptr)));

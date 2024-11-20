@@ -130,8 +130,10 @@
     <ClCompile Include="Fusion.cpp" />
     <ClCompile Include="hangman.cpp" />
     <ClCompile Include="scramble.cpp" />
+    <ClCompile Include="Tic-Tac-Toe.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Tic-Tac-Toe.h" />
     <ClInclude Include="hangman.h" />
     <ClInclude Include="scramble.h" />
   </ItemGroup>

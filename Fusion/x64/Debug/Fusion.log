@@ -1,2 +1,4 @@
-﻿  scramble.cpp
-  Fusion.vcxproj -> F:\Projects\sprint-math-games-9th-grade-fusion\x64\Debug\Fusion.exe
+﻿  Tic-Tac-Toe.cpp
+C:\Fusion\sprint-math-games-9th-grade-fusion\Fusion\Tic-Tac-Toe.cpp(81,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Fusion\sprint-math-games-9th-grade-fusion\Fusion\Tic-Tac-Toe.cpp(83,34): error C2296: '%': not valid as left operand has type 'float'
+C:\Fusion\sprint-math-games-9th-grade-fusion\Fusion\Tic-Tac-Toe.cpp(111,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
