@@ -1,11 +1,9 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 using namespace std;
 
 string WordForScramble(const string& word);
-
-void ScrambleGame(const string* words, int wordNum);
-
-static string words[] = { "apple", "banana", "cherry", "grape", "orange" , "pear" , "potato" , "watermelon"};
+void ScrambleGame(const vector<string>& words);

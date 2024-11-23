@@ -9,10 +9,7 @@
 #include "Tic-Tac-Toe.h"
 using namespace std;
 
-
 int main() {
-   
-
     int choice, game;
     bool gameState = true;
     bool menuState = true;
@@ -34,45 +31,52 @@ int main() {
             cout << "Enter your choice and press ENTER: ";
             cin >> game;
             system("cls");
+
             switch (game) {
-            case 1:
+            case 1: {
                 system("cls");
-             
                 hangman();
-           
-                
                 break;
-            case 2:
+            }
+            case 2: {
                 system("cls");
-                
-                TicTacToe( choice);
+                TicTacToe(choice);
                 break;
-            case 3:
+            }
+            case 3: {
                 system("cls");
                 cout << "You chose Scramble!" << endl;
-                
-                ScrambleGame(words, 4);
+                vector<string> words = {
+                    "apple", "banana", "cherry", "grape", "kiwi",
+                    "book", "case", "child", "company", "country",
+                    "day", "eye", "fact", "family", "group", "hand",
+                    "home", "job", "life", "lot", "man", "money",
+                    "month", "mother", "night", "number", "part",
+                    "people", "place", "point", "problem", "program",
+                    "question", "right", "room", "school", "state",
+                    "story", "student", "study", "system", "thing",
+                    "time", "water", "way", "week", "woman", "word",
+                    "work", "world", "year"
+                };
+                ScrambleGame(words);
                 break;
-            default:
+            }
+            default: {
                 system("cls");
-                
                 break;
+            }
             }
             break;
 
         case 2:
             cout << "About" << endl;
-          
             break;
 
         case 3:
-            
             gameState = false;
             return 0;
-            break;
 
         default:
-           
             break;
         }
     }
