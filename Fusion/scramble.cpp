@@ -80,7 +80,7 @@ void ScrambleGame(const vector<string>& words) {
         }
 
         char choice;
-        printWithColor("Play again? (y/n): ", "yellow");
+        cout<<"Play again? (y/n): ";
         cin >> choice;
         keepPlaying = (choice == 'y' || choice == 'Y');
     }

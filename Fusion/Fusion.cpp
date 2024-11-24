@@ -4,17 +4,23 @@
 #include <vector>
 #include <ctime>
 #include <algorithm>
+
+// Include game headers
 #include "scramble.h"
 #include "hangman.h"
 #include "Tic-Tac-Toe.h"
+
 using namespace std;
 
 int main() {
-    int choice, game;
-    bool gameState = true;
-    bool menuState = true;
+    // Variable declarations
+    int choice, game, goBack; // Menu and game selection variables
+    bool gameState = true;    // Controls the overall program state
+    bool menuState = true;    // Controls the main menu state
 
+    // Main menu loop
     while (menuState) {
+        // Display main menu options
         cout << "1 - Start" << endl;
         cout << "2 - About" << endl;
         cout << "3 - Exit" << endl;
@@ -22,7 +28,7 @@ int main() {
         cin >> choice;
 
         switch (choice) {
-        case 1:
+        case 1: // Start games menu
             system("cls");
             cout << "Choose a game!" << endl;
             cout << "1 - Hangman" << endl;
@@ -32,54 +38,69 @@ int main() {
             cin >> game;
             system("cls");
 
-            switch (game) {
-            case 1: {
-                system("cls");
-                hangman();
-                break;
+            // Game selection logic
+          switch (game) {
+        case 1: // Hangman
+            system("cls");
+            hangman(); // Call the Hangman game
+            break;
+
+        case 2: // Tic-Tac-Toe
+             system("cls");
+            TicTacToe(choice); // Call the Tic-Tac-Toe game
+            break;
+
+        case 3: { // Scramble
+            system("cls");
+            cout << "You chose Scramble!" << endl;
+            // List of words for the Scramble game
+            vector<string> words = {
+            "apple", "banana", "cherry", "grape", "kiwi",
+            "book", "case", "child", "company", "country",
+            "day", "eye", "fact", "family", "group", "hand",
+            "home", "job", "life", "lot", "man", "money",
+            "month", "mother", "night", "number", "part",
+            "people", "place", "point", "problem", "program",
+            "question", "right", "room", "school", "state",
+            "story", "student", "study", "system", "thing",
+            "time", "water", "way", "week", "woman", "word",
+            "work", "world", "year"
+            };
+            ScrambleGame(words); // Call the Scramble game
+            break;
             }
-            case 2: {
-                system("cls");
-                TicTacToe(choice);
-                break;
+
+            default: // Invalid game choice
+            system("cls");
+            cout << "Invalid choice, returning to main menu." << endl;
+            break;
             }
-            case 3: {
+
+            break;
+
+        case 2: // About section
+            system("cls");
+            cout << "Our Team : \n\n";
+            cout << "Kaloyan Boychev - Scrum Trainer\n";
+            cout << "Valeri Tenev - Frontend Developer\n";
+            cout << "Aleksandr Toder - Backend Developer\n";
+            cout << "Teodor Enev - Designer\n\n";
+            cout << "1- Go back\n";
+            cin >> goBack;
+            if (goBack == 1) {
                 system("cls");
-                cout << "You chose Scramble!" << endl;
-                vector<string> words = {
-                    "apple", "banana", "cherry", "grape", "kiwi",
-                    "book", "case", "child", "company", "country",
-                    "day", "eye", "fact", "family", "group", "hand",
-                    "home", "job", "life", "lot", "man", "money",
-                    "month", "mother", "night", "number", "part",
-                    "people", "place", "point", "problem", "program",
-                    "question", "right", "room", "school", "state",
-                    "story", "student", "study", "system", "thing",
-                    "time", "water", "way", "week", "woman", "word",
-                    "work", "world", "year"
-                };
-                ScrambleGame(words);
-                break;
-            }
-            default: {
-                system("cls");
-                break;
-            }
             }
             break;
 
-        case 2:
-            cout << "About" << endl;
-            break;
-
-        case 3:
-            gameState = false;
+        case 3: // Exit
+            gameState = false; // End the program
             return 0;
 
-        default:
+        default: // Invalid menu choice
+            cout << "Invalid choice, please try again." << endl;
             break;
         }
     }
 
-    return 0;
+    return 0; // Exit the program
 }
