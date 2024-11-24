@@ -1,7 +1,6 @@
 <h1 align="center"></a></h1>
 <p align = "center">
 <img src =https://github.com/user-attachments/assets/9a42cb22-37d7-4131-9e2c-a7d95b6e7da5
-
 "" alt = "Logo" width="350">
 </p>
  
