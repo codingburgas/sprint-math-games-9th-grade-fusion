@@ -35,6 +35,17 @@ void printWithColor(const string& text, const string& color) {
 }
 
 string WordForScramble(const string& word) {
+    vector<string> words =
+    { "apple", "banana", "cherry", "grape", "kiwi",
+    "book", "case", "child", "company", "country",
+    "day", "eye", "fact", "family", "group", "hand",
+    "home", "job", "life", "lot", "man", "money",
+    "month", "mother", "night", "number", "part",
+    "people", "place", "point", "problem", "program",
+    "question", "right", "room", "school", "state",
+    "story", "student", "study", "system", "thing",
+    "time", "water", "way", "week", "woman", "word",
+    "work", "world", "year" };
     string scrambled = word;
     random_device rd;
     mt19937 rng(rd());  // Mersenne Twister random number generator
