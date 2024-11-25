@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Fusion.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="hangman.cpp" />
     <ClCompile Include="scramble.cpp" />
     <ClCompile Include="Tic-Tac-Toe.cpp" />
